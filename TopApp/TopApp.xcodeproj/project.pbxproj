@@ -16,6 +16,11 @@
 		34A29CEF2B9BD1EF00A921C6 /* TopAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29CEE2B9BD1EF00A921C6 /* TopAppTests.swift */; };
 		34A29CF92B9BD1EF00A921C6 /* TopAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29CF82B9BD1EF00A921C6 /* TopAppUITests.swift */; };
 		34A29CFB2B9BD1EF00A921C6 /* TopAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29CFA2B9BD1EF00A921C6 /* TopAppUITestsLaunchTests.swift */; };
+		34A29D092B9BD34200A921C6 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29D082B9BD34200A921C6 /* Preferences.swift */; };
+		34A29D0B2B9BD36000A921C6 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29D0A2B9BD36000A921C6 /* Server.swift */; };
+		34A29D0D2B9BD37600A921C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29D0C2B9BD37600A921C6 /* API.swift */; };
+		34A29D112B9BE5DB00A921C6 /* URLRequest+ASNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29D102B9BE5DB00A921C6 /* URLRequest+ASNetworking.swift */; };
+		34A29D132B9C943000A921C6 /* URLRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29D122B9C943000A921C6 /* URLRequestable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		34A29CF42B9BD1EF00A921C6 /* TopAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A29CF82B9BD1EF00A921C6 /* TopAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAppUITests.swift; sourceTree = "<group>"; };
 		34A29CFA2B9BD1EF00A921C6 /* TopAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34A29D082B9BD34200A921C6 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		34A29D0A2B9BD36000A921C6 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		34A29D0C2B9BD37600A921C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		34A29D102B9BE5DB00A921C6 /* URLRequest+ASNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+ASNetworking.swift"; sourceTree = "<group>"; };
+		34A29D122B9C943000A921C6 /* URLRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,7 @@
 		34A29CCB2B9BD1EE00A921C6 = {
 			isa = PBXGroup;
 			children = (
+				34A29D072B9BD32C00A921C6 /* Core */,
 				34A29CD62B9BD1EE00A921C6 /* TopApp */,
 				34A29CED2B9BD1EF00A921C6 /* TopAppTests */,
 				34A29CF72B9BD1EF00A921C6 /* TopAppUITests */,
@@ -125,6 +136,18 @@
 				34A29CFA2B9BD1EF00A921C6 /* TopAppUITestsLaunchTests.swift */,
 			);
 			path = TopAppUITests;
+			sourceTree = "<group>";
+		};
+		34A29D072B9BD32C00A921C6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				34A29D082B9BD34200A921C6 /* Preferences.swift */,
+				34A29D0A2B9BD36000A921C6 /* Server.swift */,
+				34A29D0C2B9BD37600A921C6 /* API.swift */,
+				34A29D102B9BE5DB00A921C6 /* URLRequest+ASNetworking.swift */,
+				34A29D122B9C943000A921C6 /* URLRequestable.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A29D0B2B9BD36000A921C6 /* Server.swift in Sources */,
 				34A29CDC2B9BD1EE00A921C6 /* ViewController.swift in Sources */,
+				34A29D112B9BE5DB00A921C6 /* URLRequest+ASNetworking.swift in Sources */,
+				34A29D132B9C943000A921C6 /* URLRequestable.swift in Sources */,
 				34A29CD82B9BD1EE00A921C6 /* AppDelegate.swift in Sources */,
+				34A29D092B9BD34200A921C6 /* Preferences.swift in Sources */,
+				34A29D0D2B9BD37600A921C6 /* API.swift in Sources */,
 				34A29CDA2B9BD1EE00A921C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

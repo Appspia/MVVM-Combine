@@ -12,6 +12,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+//        API<String>.paid.request.sink { error in
+//            
+//        } receiveValue: { stirng: String in
+//            
+//        }
+
     }
 
 
