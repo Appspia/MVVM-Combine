@@ -7,7 +7,16 @@
 
 import Foundation
 
-enum Server: String {
-    case dev = ""
-    case production = "https://itunes.apple.com"
+enum Server {
+    case dev
+    case production
+    
+    var host: String {
+        switch self {
+        case .dev:
+            return "https://itunes.apple.com"
+        case .production:
+            return "https://itunes.apple.com"
+        }
+    }
 }

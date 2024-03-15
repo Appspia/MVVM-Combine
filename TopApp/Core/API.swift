@@ -16,15 +16,20 @@ enum API<T: Codable>: URLRequestable {
 
 extension API {
     var request: AnyPublisher<T, ResponseError> {
-        let requestData: ASRequestData
+        let item: URLRequestItem
         switch self {
         case .free:
-            requestData = ASRequestData(urlString: server.rawValue + "/kr/rss/topfreeapplications/limit=100/json", httpMethod: .get)
+            item = URLRequestItem(server.host + "/kr/rss/topfreeapplications/limit=100/json", method: .post)
+            item.parameters["test"] = 1
+            item.parameters["test2"] = "2"
+            item.parameters["test3"] = "한글"
+            item.contetType = .wwwFormUrlencoded
         case .paid:
-            requestData = ASRequestData(urlString: server.rawValue + "/kr/rss/toppaidapplications/limit=100/json", httpMethod: .get)
+            item = URLRequestItem(server.host + "/kr/rss/toppaidapplications/limit=100/json", method: .get)
         case .grossing:
-            requestData = ASRequestData(urlString: server.rawValue + "/kr/rss/topgrossingapplications/limit=100/json", httpMethod: .get)
+            item = URLRequestItem(server.host + "/kr/rss/topgrossingapplications/limit=100/json", method: .get)
         }
-        return dataTaskPublisher(urlRequest: URLRequest(requestData: requestData))
+        
+        return dataTaskPublisher(urlRequest: URLRequest(item: item))
     }
 }

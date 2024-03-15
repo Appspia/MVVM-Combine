@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348D826B2BA322D500DBCC72 /* URLRequest+RequestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D826A2BA322D500DBCC72 /* URLRequest+RequestItem.swift */; };
+		348D82742BA500E100DBCC72 /* TopAppsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348D82732BA500E100DBCC72 /* TopAppsItem.swift */; };
 		34A29CD82B9BD1EE00A921C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29CD72B9BD1EE00A921C6 /* AppDelegate.swift */; };
 		34A29CDA2B9BD1EE00A921C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29CD92B9BD1EE00A921C6 /* SceneDelegate.swift */; };
 		34A29CDC2B9BD1EE00A921C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29CDB2B9BD1EE00A921C6 /* ViewController.swift */; };
@@ -19,7 +21,6 @@
 		34A29D092B9BD34200A921C6 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29D082B9BD34200A921C6 /* Preferences.swift */; };
 		34A29D0B2B9BD36000A921C6 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29D0A2B9BD36000A921C6 /* Server.swift */; };
 		34A29D0D2B9BD37600A921C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29D0C2B9BD37600A921C6 /* API.swift */; };
-		34A29D112B9BE5DB00A921C6 /* URLRequest+ASNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29D102B9BE5DB00A921C6 /* URLRequest+ASNetworking.swift */; };
 		34A29D132B9C943000A921C6 /* URLRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A29D122B9C943000A921C6 /* URLRequestable.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		348D826A2BA322D500DBCC72 /* URLRequest+RequestItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+RequestItem.swift"; sourceTree = "<group>"; };
+		348D82732BA500E100DBCC72 /* TopAppsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAppsItem.swift; sourceTree = "<group>"; };
 		34A29CD42B9BD1EE00A921C6 /* TopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A29CD72B9BD1EE00A921C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34A29CD92B9BD1EE00A921C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +60,6 @@
 		34A29D082B9BD34200A921C6 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		34A29D0A2B9BD36000A921C6 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		34A29D0C2B9BD37600A921C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		34A29D102B9BE5DB00A921C6 /* URLRequest+ASNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+ASNetworking.swift"; sourceTree = "<group>"; };
 		34A29D122B9C943000A921C6 /* URLRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,8 +146,9 @@
 				34A29D082B9BD34200A921C6 /* Preferences.swift */,
 				34A29D0A2B9BD36000A921C6 /* Server.swift */,
 				34A29D0C2B9BD37600A921C6 /* API.swift */,
-				34A29D102B9BE5DB00A921C6 /* URLRequest+ASNetworking.swift */,
+				348D826A2BA322D500DBCC72 /* URLRequest+RequestItem.swift */,
 				34A29D122B9C943000A921C6 /* URLRequestable.swift */,
+				348D82732BA500E100DBCC72 /* TopAppsItem.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -283,8 +286,9 @@
 			files = (
 				34A29D0B2B9BD36000A921C6 /* Server.swift in Sources */,
 				34A29CDC2B9BD1EE00A921C6 /* ViewController.swift in Sources */,
-				34A29D112B9BE5DB00A921C6 /* URLRequest+ASNetworking.swift in Sources */,
 				34A29D132B9C943000A921C6 /* URLRequestable.swift in Sources */,
+				348D826B2BA322D500DBCC72 /* URLRequest+RequestItem.swift in Sources */,
+				348D82742BA500E100DBCC72 /* TopAppsItem.swift in Sources */,
 				34A29CD82B9BD1EE00A921C6 /* AppDelegate.swift in Sources */,
 				34A29D092B9BD34200A921C6 /* Preferences.swift in Sources */,
 				34A29D0D2B9BD37600A921C6 /* API.swift in Sources */,

@@ -6,19 +6,21 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
 
+    var cancellables =  Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
-//        API<String>.paid.request.sink { error in
-//            
-//        } receiveValue: { stirng: String in
-//            
-//        }
+        API.free.request.sink { error in
+            print(error)
+        } receiveValue: { (item: TopAppsItem.TopApps) in
+            print(item)
+        }.store(in: &cancellables)
 
     }
 
