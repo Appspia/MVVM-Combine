@@ -27,15 +27,15 @@ class URLRequestItem {
     var parameters: [String: Any] = [:]
     var contetType: ContentType = .wwwFormUrlencoded
     
-    // MARK: - Form Data
-    struct FormDataItem {
-        enum FormDataType {
+    // MARK: - Multipart
+    struct MultipartItem {
+        enum ContentType {
             case data
             case png
             case jpg
             case custom(String)
             
-            var contentType: String {
+            var toString: String {
                 switch self {
                 case .data:
                     return "application/octet-stream"
@@ -49,19 +49,19 @@ class URLRequestItem {
             }
         }
 
-        var type: FormDataType
+        var contentType: ContentType
         var name: String
         var data: Data
         var fileName: String
         
-        init(type: FormDataType, name: String, data: Data, fileName: String?) {
-            self.type = type
+        init(contentType: ContentType, name: String, data: Data, fileName: String?) {
+            self.contentType = contentType
             self.name = name
             self.data = data
             self.fileName = fileName ?? NSUUID().uuidString
         }
     }
-    var formDataItems: [FormDataItem] = []
+    var multipartItems: [MultipartItem] = []
     
     // MARK: - Options
     var cachePolicy: URLRequest.CachePolicy = .reloadIgnoringLocalCacheData
@@ -70,6 +70,11 @@ class URLRequestItem {
     public init(_ url: String, method: HttpMethod) {
         urlString = url
         httpMethod = method
+    }
+    
+    func addMultipartItem(contentType: MultipartItem.ContentType, name: String, data: Data, fileName: String?) {
+        let multipartItem = MultipartItem(contentType: contentType, name: name, data: data, fileName: fileName)
+        multipartItems.append(multipartItem)
     }
 }
 
@@ -102,11 +107,11 @@ extension URLRequest {
                     formBody.append(string: "\(value)\r\n")
                 }
                 
-                for item in item.formDataItems {
+                for multipartItem in item.multipartItems {
                     formBody.append(string: "--BOUNDARY\r\n")
-                    formBody.append(string: "Content-Disposition: form-data; name=\"\(item.name)\"; filename=\"\(item.fileName)\"\r\n")
-                    formBody.append(string: "Content-Type: \(item.type.contentType)\r\n\r\n")
-                    formBody.append(item.data)
+                    formBody.append(string: "Content-Disposition: form-data; name=\"\(multipartItem.name)\"; filename=\"\(multipartItem.fileName)\"\r\n")
+                    formBody.append(string: "Content-Type: \(multipartItem.contentType.toString)\r\n\r\n")
+                    formBody.append(multipartItem.data)
                     formBody.append(string: "\r\n")
                 }
                 formBody.append(string: "--BOUNDARY--\r\n")
