@@ -30,17 +30,15 @@ extension URLRequestable {
 //                try sessionRestorePublisher(urlRequest: urlRequest)
 //            }
             .handleEvents(receiveOutput: { (data: Data, response: URLResponse) in
-                let urlString = urlRequest.url?.absoluteString ?? ""
-                let httpURLResponse = response as? HTTPURLResponse
                 print("""
                 --------------- HTTP REQUEST ----------------
-                URL: \(urlString)
+                URL: \(urlRequest.url?.absoluteString ?? "")
                 HEADER: \(prettyString(urlRequest.allHTTPHeaderFields))
                 BODY: \(prettyString(urlRequest.httpBody))
                 --------------- HTTP RESPONSE ---------------
-                URL: \(urlString)
-                HEADER: \(prettyString(httpURLResponse?.allHeaderFields))
-                STATUS: \(String(httpURLResponse?.statusCode ?? 0))
+                URL: \(response.url?.absoluteString ?? "")
+                HEADER: \(prettyString((response as? HTTPURLResponse)?.allHeaderFields))
+                STATUS: \(String((response as? HTTPURLResponse)?.statusCode ?? -1))
                 DATA: \(prettyString(data))
                 ---------------------------------------------
                 """)
